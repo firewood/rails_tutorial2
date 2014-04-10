@@ -7,6 +7,10 @@ gem 'rails', '~> 4.0.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 group :test do
@@ -56,3 +60,17 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+case RUBY_PLATFORM
+when /darwin/
+  gem 'terminal-notifier-guard'
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+  gem 'growl'
+when /win32/
+  gem 'rb-fchange', '>= 0.0.5'
+  gem 'rb-notifu', '>= 0.0.4'
+  gem 'win32console', '>= 1.3.0'
+  gem 'wdm'
+  gem 'guard-livereload'
+end
