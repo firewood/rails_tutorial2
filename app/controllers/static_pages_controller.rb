@@ -12,4 +12,10 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def debug
+  end
+
+  def marquee
+  end
+
 end
