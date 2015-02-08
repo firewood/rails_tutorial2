@@ -12,19 +12,10 @@ group :development, :test do
   gem 'guard-spork'
   gem 'childprocess'
 
-  case RUBY_PLATFORM
-  when /darwin/
-    gem 'terminal-notifier-guard'
-    gem 'rb-fsevent', require: false
-    gem 'rb-fchange', require: false
-    gem 'growl'
-  when /win32/
-    gem 'rb-fchange', '>= 0.0.5'
-    gem 'rb-notifu', '>= 0.0.4'
-    gem 'win32console', '>= 1.3.0'
-    gem 'wdm'
-    gem 'guard-livereload'
-  end
+  gem 'terminal-notifier-guard'
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+  gem 'growl'
 end
 
 group :test do
