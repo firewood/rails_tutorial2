@@ -221,4 +221,3 @@ DEPENDENCIES
   terminal-notifier-guard
   turbolinks
   uglifier (>= 1.3.0)
-
