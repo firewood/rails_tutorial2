@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  resources :users
+
+  resources :hoge
+
   get "users/new"
 
   root  'static_pages#home'
